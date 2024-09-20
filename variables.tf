@@ -14,7 +14,7 @@ variable "tags" {
 
 variable "location" {
   type        = string
-  default     = "eastus"
+  default     = "centralindia"
   description = "Azure region"
 }
 
