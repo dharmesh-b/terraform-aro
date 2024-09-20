@@ -122,9 +122,9 @@ variable "aro_version" {
   type        = string
   description = <<EOF
   ARO version
-  Default "4.12.25"
+  Default "4.13.23"
   EOF
-  default     = "4.12.25"
+  default     = "4.13.23"
 }
 
 variable "acr_private" {
@@ -160,11 +160,7 @@ variable "subscription_id" {
 variable "domain" {
   type        = string
   description = "Domain for the cluster."
-
-  validation {
-    condition     = var.domain != "" && var.domain != null
-    error_message = "Invalid 'domain'. Must be not be empty."
-  }
+  default     = null
 }
 
 variable "main_vm_size" {
